@@ -40,11 +40,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
+        android:layout_alignRight="@+id/msg"
+        android:layout_marginRight="15dp"
         android:textSize="10dp"
+        android:textColor="#FFFFFF"
         android:layout_below="@+id/msg"
         android:layout_marginTop="3dp"
         android:text="10:30"
-        android:alpha="0.5"/>
+        android:alpha="0.7"/>
 
 </RelativeLayout>
