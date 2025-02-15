@@ -23,5 +23,10 @@ class Register : AppCompatActivity() {
         loginButton.setOnClickListener {
             finish()
         }
+
+        val registerButton = findViewById<TextView>(R.id.register)
+        registerButton.setOnClickListener {
+            finish()
+        }
     }
 }
