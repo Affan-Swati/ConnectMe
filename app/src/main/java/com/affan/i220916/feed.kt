@@ -28,6 +28,12 @@ class feed : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val profileBtn = findViewById<ImageView>(R.id.profile_btn)
+        profileBtn.setOnClickListener {
+            val intent = Intent(this, profile_tab::class.java)
+            startActivity(intent)
+        }
+
         val recyclerViewStories = findViewById<RecyclerView>(R.id.recycler_view_stories)
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerViewStories.layoutManager = layoutManager
