@@ -38,6 +38,13 @@ class dm : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val call_btn = findViewById<ImageView>(R.id.audio_call)
+        call_btn.setOnClickListener {
+            finish()
+            val intent = Intent(this, audio_call::class.java)
+            startActivity(intent)
+        }
+
         val user = 1
         val other = 2
 

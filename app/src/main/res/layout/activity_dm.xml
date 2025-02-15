@@ -35,6 +35,7 @@
             />
 
         <ImageView
+            android:id="@+id/audio_call"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_alignParentRight="true"
@@ -43,6 +44,7 @@
             android:layout_marginTop="33dp" />
 
         <ImageView
+            android:id="@+id/video_call"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentRight="true"
