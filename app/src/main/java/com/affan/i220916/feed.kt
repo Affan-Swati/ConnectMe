@@ -53,7 +53,6 @@ class feed : AppCompatActivity() {
         val postList = mutableListOf<post_model>()
         postList.add(post_model("Affan Ahmad", R.drawable.affan_pfp, R.drawable.eye_pfp, "Ayee Masla Sara Roti Da"))
         postList.add(post_model("Adil Nadeem", R.drawable.adil_pfp, R.drawable.default_feed_pic, "Takhleeq On Top"))
-        // Add more posts as needed
 
         recyclerViewPosts.adapter = post_adapter(postList)
 
