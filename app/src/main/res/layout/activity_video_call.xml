@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DEDEDE"
     tools:context=".audio_call">
 
 
@@ -16,15 +17,7 @@
         android:textStyle="bold"
         android:text="Affan Ahmad"
         android:textSize="30dp"
-        android:layout_marginTop="100dp"/>
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/pfp"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/affan_pfp"
-        app:shapeAppearanceOverlay="@style/CircleShape"/>
+        android:layout_marginTop="30dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,8 +26,15 @@
         android:textColor="#000000"
         android:text="10:32"
         android:textSize="25dp"
-        android:layout_marginTop="500dp"/>
-    
+        android:layout_marginTop="80dp"/>
+
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="245dp"
+        android:background="@drawable/white_rounded_rect"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -58,7 +58,6 @@
             android:background="@drawable/circle_icon_bg"
             android:padding="5dp"
             android:src="@drawable/three_dots_horizontal" />
-s
         <ImageView
             android:layout_width="45dp"
             android:layout_height="45dp"

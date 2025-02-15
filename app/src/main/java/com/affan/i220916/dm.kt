@@ -45,6 +45,14 @@ class dm : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val call_btn2 = findViewById<ImageView>(R.id.video_call)
+        call_btn2.setOnClickListener {
+            finish()
+            val intent = Intent(this, video_call::class.java)
+            startActivity(intent)
+        }
+
+
         val user = 1
         val other = 2
 
