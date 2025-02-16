@@ -47,6 +47,11 @@ class contacts_tab : AppCompatActivity() {
             finish()
         }
 
+        val postBtn = findViewById<ImageView>(R.id.post_btn)
+        postBtn.setOnClickListener {
+            val intent = Intent(this, new_post_gallery::class.java)
+            startActivity(intent)
+        }
 
 
         val follower_list = mutableListOf<follower_model>()
