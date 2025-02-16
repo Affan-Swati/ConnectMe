@@ -62,6 +62,12 @@ class profile_tab : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val contactBtn = findViewById<ImageView>(R.id.contact_btn)
+        contactBtn.setOnClickListener {
+            val intent = Intent(this, contacts_tab::class.java)
+            startActivity(intent)
+        }
+
         val recyclerProfilePost = findViewById<RecyclerView>(R.id.recycler_view_posts)
         val layoutManager = LinearLayoutManager(this)
         recyclerProfilePost.layoutManager = layoutManager

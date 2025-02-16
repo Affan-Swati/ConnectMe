@@ -48,6 +48,12 @@ class feed : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val contactBtn = findViewById<ImageView>(R.id.contact_btn)
+        contactBtn.setOnClickListener {
+            val intent = Intent(this, contacts_tab::class.java)
+            startActivity(intent)
+        }
+
         val recyclerViewStories = findViewById<RecyclerView>(R.id.recycler_view_stories)
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerViewStories.layoutManager = layoutManager

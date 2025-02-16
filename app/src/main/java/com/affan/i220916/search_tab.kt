@@ -41,6 +41,12 @@ class search_tab : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val contactBtn = findViewById<ImageView>(R.id.contact_btn)
+        contactBtn.setOnClickListener {
+            val intent = Intent(this, contacts_tab::class.java)
+            startActivity(intent)
+        }
+
         val search_list = mutableListOf<search_model>()
 
         search_list.add(search_model("Affan Ahmad"))
