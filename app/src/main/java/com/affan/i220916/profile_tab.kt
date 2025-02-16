@@ -3,6 +3,8 @@ package com.affan.i220916
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,6 +26,18 @@ class profile_tab : AppCompatActivity() {
         val homeBtn = findViewById<ImageView>(R.id.home_btn)
         homeBtn.setOnClickListener {
             val intent = Intent(this, feed::class.java)
+            startActivity(intent)
+        }
+
+        val followerBtn = findViewById<LinearLayout>(R.id.followers_btn)
+        followerBtn.setOnClickListener {
+            val intent = Intent(this, followers::class.java)
+            startActivity(intent)
+        }
+
+        val followingBtn = findViewById<LinearLayout>(R.id.following_btn)
+        followingBtn.setOnClickListener {
+            val intent = Intent(this, following::class.java)
             startActivity(intent)
         }
 

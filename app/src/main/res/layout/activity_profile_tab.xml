@@ -98,7 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="150dp">
+            android:layout_marginLeft="150dp"
+            android:id="@+id/followers_btn">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -121,7 +122,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="250dp">
+            android:layout_marginLeft="250dp"
+            android:id="@+id/following_btn">
 
             <TextView
                 android:layout_width="wrap_content"
