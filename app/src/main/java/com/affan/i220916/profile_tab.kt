@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -38,6 +39,12 @@ class profile_tab : AppCompatActivity() {
         val followingBtn = findViewById<LinearLayout>(R.id.following_btn)
         followingBtn.setOnClickListener {
             val intent = Intent(this, following::class.java)
+            startActivity(intent)
+        }
+
+        val edit_profile_Btn = findViewById<ImageView>(R.id.edit_button)
+        edit_profile_Btn.setOnClickListener {
+            val intent = Intent(this, edit_profile::class.java)
             startActivity(intent)
         }
 
