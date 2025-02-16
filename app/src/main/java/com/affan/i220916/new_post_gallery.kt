@@ -3,6 +3,7 @@ package com.affan.i220916
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,6 +31,12 @@ class new_post_gallery : AppCompatActivity() {
         cameraButton.setOnClickListener {
             finish()
             intent = Intent(this, new_post_camera::class.java)
+            startActivity(intent)
+        }
+
+        val nextButton = findViewById<TextView>(R.id.H2)
+        nextButton.setOnClickListener {
+            intent = Intent(this, new_post_share::class.java)
             startActivity(intent)
         }
 
