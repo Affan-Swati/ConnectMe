@@ -26,6 +26,14 @@ class new_post_gallery : AppCompatActivity() {
             finish()
         }
 
+        val cameraButton = findViewById<ImageView>(R.id.camera_button)
+        cameraButton.setOnClickListener {
+            finish()
+            intent = Intent(this, new_post_camera::class.java)
+            startActivity(intent)
+        }
+
+
         val recyclerGalleryItems = findViewById<RecyclerView>(R.id.recycler_view_gallery)
         val layoutManager = LinearLayoutManager(this)
         recyclerGalleryItems.layoutManager = layoutManager
