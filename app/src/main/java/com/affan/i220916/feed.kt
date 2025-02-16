@@ -42,6 +42,12 @@ class feed : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val postBtn = findViewById<ImageView>(R.id.post_btn)
+        postBtn.setOnClickListener {
+            val intent = Intent(this, new_post_gallery::class.java)
+            startActivity(intent)
+        }
+
         val recyclerViewStories = findViewById<RecyclerView>(R.id.recycler_view_stories)
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerViewStories.layoutManager = layoutManager

@@ -35,6 +35,12 @@ class search_tab : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val postBtn = findViewById<ImageView>(R.id.post_btn)
+        postBtn.setOnClickListener {
+            val intent = Intent(this, new_post_gallery::class.java)
+            startActivity(intent)
+        }
+
         val search_list = mutableListOf<search_model>()
 
         search_list.add(search_model("Affan Ahmad"))

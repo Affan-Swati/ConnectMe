@@ -56,6 +56,12 @@ class profile_tab : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val postBtn = findViewById<ImageView>(R.id.post_btn)
+        postBtn.setOnClickListener {
+            val intent = Intent(this, new_post_gallery::class.java)
+            startActivity(intent)
+        }
+
         val recyclerProfilePost = findViewById<RecyclerView>(R.id.recycler_view_posts)
         val layoutManager = LinearLayoutManager(this)
         recyclerProfilePost.layoutManager = layoutManager
