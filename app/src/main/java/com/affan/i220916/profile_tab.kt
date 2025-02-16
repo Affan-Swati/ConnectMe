@@ -26,7 +26,15 @@ class profile_tab : AppCompatActivity() {
 
         val homeBtn = findViewById<ImageView>(R.id.home_btn)
         homeBtn.setOnClickListener {
+            finish()
             val intent = Intent(this, feed::class.java)
+            startActivity(intent)
+        }
+
+        val searchBtn = findViewById<ImageView>(R.id.search_btn)
+        searchBtn.setOnClickListener {
+            finish()
+            val intent = Intent(this, search_tab::class.java)
             startActivity(intent)
         }
 

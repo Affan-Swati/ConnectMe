@@ -6,66 +6,55 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feed">
+    tools:context=".search_tab">
 
-    <!-- Heading -->
-    <TextView
-        android:id="@+id/H1"
+    <EditText
+        android:id="@+id/search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My Community"
-        android:textColor="#313133"
-        android:layout_marginTop="30dp"
-        android:textSize="28dp"
+        android:layout_height="70dp"
+        android:hint="Search"
         android:paddingLeft="20dp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="45dp"
+        android:textSize="20dp"
+        android:background="@android:color/transparent"
 
-    <!-- Subheading -->
-    <TextView
-        android:id="@+id/H2"
-        android:layout_below="@+id/H1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="A place for all your questions"
-        android:textColor="#313133"
-        android:textSize="18dp"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="5dp"/>
+        />
 
     <ImageView
-        android:id="@+id/open_dms"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="10dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="15dp"
-        android:src="@drawable/share_icon" />
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/searchIcon"
+        android:src="@drawable/search_icon"
+        android:layout_alignRight="@+id/search"
+        android:layout_alignBottom="@+id/search"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:alpha="0.4"
+        />
 
-    <!-- Horizontal RecyclerView for Stories -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_stories"
-        android:layout_below="@+id/H2"
+    <TextView
+        android:layout_below="@+id/search"
+        android:id="@+id/h1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="8dp"
+        android:text="Recent Searches"
+        android:textStyle="bold"
+        android:textColor="#59442F"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/search"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        />
 
-        android:scrollbars="none"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-
-        tools:listitem="@layout/story"/>
-
-    <!-- Vertical RecyclerView for Posts -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_posts"
-        android:layout_below="@+id/recycler_view_stories"
+        android:layout_below="@+id/h1"
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_above="@+id/bottom_navigation"
+        android:layout_height="262dp"
+        android:layout_marginTop="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/post"
-        android:background="#F0EBEB"/>
+        tools:listitem="@layout/search_item"/>
+
 
     <LinearLayout
         android:id="@+id/bottom_navigation"
@@ -85,11 +74,13 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="12dp"
-                android:src="@drawable/home_icon" />
+                android:src="@drawable/home_icon"
+                android:id="@+id/home_btn"
+                android:alpha="0.5"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:textColor="#a7a2a9"
                 android:text="Home"/>
 
         </LinearLayout>
@@ -101,16 +92,14 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/search_btn"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="12dp"
-                android:src="@drawable/search_icon"
-                android:alpha="0.5"/>
+                android:src="@drawable/search_icon"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#a7a2a9"
+                android:textColor="#000000"
                 android:text="Search"/>
 
         </LinearLayout>
@@ -152,12 +141,12 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/contact_btn"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginStart="10dp"
                 android:src="@drawable/contact_icon"
+                android:id="@+id/contact_btn"
                 android:alpha="0.5"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -169,5 +158,7 @@
 
 
     </LinearLayout>
+
+
 
 </RelativeLayout>
